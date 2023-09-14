@@ -678,23 +678,31 @@
                     <div class="contact__content">
                         <h3 class="contact__title">Need a quote for a project?</h3>
 
-                        <form action="" class="contact__form">
+                        <form class="contact__form" action="https://formsubmit.co/salami.tomie@gmail.com" method="POST">
+                            <input type="hidden" name="_subject" value="Quote request for Developer services">
+                            <input type="hidden" name="_autoresponse" value="Your quote request has been received. Looking forward to connecting with you!">
+
                             <div class="contact__form-div">
-                                <label class="contact__form-tag">Names</label>
-                                <input type="text" placeholder="Insert your name" class="contact__form-input">
+                                <label class="contact__form-tag">Name</label>
+                                <input type="text" placeholder="Insert your name" class="contact__form-input" required>
                             </div>
 
                             <div class="contact__form-div">
-                                <label class="contact__form-tag">Mail</label>
-                                <input type="email" placeholder="Insert your email" class="contact__form-input">
+                                <label class="contact__form-tag">Email</label>
+                                <input type="email" placeholder="Insert your email" class="contact__form-input" required>
+                            </div>
+
+                            <div class="contact__form-div">
+                                <label class="contact__form-tag">Phone number (optional)</label>
+                                <input type="tel" placeholder="Insert your phone number" class="contact__form-input">
                             </div>
 
                             <div class="contact__form-div contact__form-area">
-                                <label class="contact__form-tag">Project</label>
-                                <textarea name="" id="" cols="30" rows="10" placeholder="Tell me about your project" class="contact__form-input"></textarea>
+                                <label class="contact__form-tag">Project details</label>
+                                <textarea name="" id="" cols="30" rows="10" placeholder="Tell me about your project" class="contact__form-input" required></textarea>
                             </div>
 
-                            <button class="button">Send Message</button>
+                            <button class="button" type="submit">Send Message</button>
                         </form>
                     </div>
                 </div>
