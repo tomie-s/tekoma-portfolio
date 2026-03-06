@@ -971,7 +971,7 @@
         I build <strong>production-grade full-stack applications</strong> for fintech products —
         with 4+ years of engineering experience and 5 years of deep banking operations expertise.
         Currently at <strong>TD Securities</strong> and independently building
-        <strong><a href="https://dascet-app.vercel.app" target="_blank"
+        <strong><a href="https://dascet.com" target="_blank"
             style="color:var(--teal);text-decoration:none;">Dascet</a></strong> —
         a community-powered platform helping Canadians discover and evaluate financial tools.
       </p>
@@ -1011,7 +1011,7 @@
         <p>
           At TD Securities I own a shared React + TypeScript component library adopted bank-wide, ship across both
           frontend and Java backend codebases, and lead the Frontend Community of Practice. Outside of work, I'm
-          building <a href="https://dascet.com" target="_blank">Dascet</a> end-to-end — from database schema
+          building <a href="https://dascet-app.vercel.app" target="_blank">Dascet</a> end-to-end — from database schema
           and API design to product strategy and community growth.
         </p>
         <p>
@@ -1219,11 +1219,11 @@
         how people relate to their money. If that sounds like you, I'd love to connect.
       </p>
       <div class="contact-links reveal">
-        <a href="/cdn-cgi/l/email-protection#5427353835393d7a203b393d31143339353d387a373b39" class="contact-link">
+        <a id="email-link" href="#" class="contact-link">
           <span class="contact-link-icon">✉</span>
           <span class="contact-link-label">Email</span>
-          <span class="contact-link-value"><span class="__cf_email__"
-              data-cfemail="dba8bab7bab6b2f5afb4b6b2be9bbcb6bab2b7f5b8b4b6">[email&#160;protected]</span></span>
+          <span id="email-display" class="contact-link-value"></span>
+        </a>
         </a>
         <a href="https://www.linkedin.com/in/tomisalami/" target="_blank" class="contact-link">
           <span class="contact-link-icon">in</span>
@@ -1254,6 +1254,16 @@
 
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script>
+    // Build email link at runtime to bypass obfuscation
+    const u = 'salami.tomie';
+    const d = 'gmail.com';
+    const el = document.getElementById('email-link');
+    const ed = document.getElementById('email-display');
+    if (el && ed) {
+      el.href = 'mailto:' + u + '@' + d;
+      ed.textContent = u + '@' + d;
+    }
+
     // Scroll reveal - add hidden first, remove once on entry, never re-hide
     const revealEls = document.querySelectorAll('.reveal');
     revealEls.forEach(el => el.classList.add('hidden'));
