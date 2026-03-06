@@ -813,11 +813,6 @@
       text-transform: uppercase;
     }
 
-    .contact-link-value {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
     .contact-cta {
       margin-top: 1rem;
     }
@@ -1222,18 +1217,15 @@
         <a id="email-link" href="#" class="contact-link">
           <span class="contact-link-icon">✉</span>
           <span class="contact-link-label">Email</span>
-          <span id="email-display" class="contact-link-value"></span>
         </a>
         </a>
         <a href="https://www.linkedin.com/in/tomisalami/" target="_blank" class="contact-link">
           <span class="contact-link-icon">in</span>
           <span class="contact-link-label">LinkedIn</span>
-          <span class="contact-link-value">tomisalami</span>
         </a>
         <a href="https://github.com/tomie-s" target="_blank" class="contact-link">
           <span class="contact-link-icon">⌥</span>
           <span class="contact-link-label">GitHub</span>
-          <span class="contact-link-value">tomie-s</span>
         </a>
       </div>
       <div class="contact-cta reveal">
@@ -1258,11 +1250,7 @@
     const u = 'salami.tomie';
     const d = 'gmail.com';
     const el = document.getElementById('email-link');
-    const ed = document.getElementById('email-display');
-    if (el && ed) {
-      el.href = 'mailto:' + u + '@' + d;
-      ed.textContent = u + '@' + d;
-    }
+    if (el) el.href = 'mailto:' + u + '@' + d;
 
     // Scroll reveal - add hidden first, remove once on entry, never re-hide
     const revealEls = document.querySelectorAll('.reveal');
